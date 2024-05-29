@@ -30,14 +30,14 @@ def generate_pass(len):
 
 
 
-
+#create a file to store hashed pass
 file='hashed_pass.log'
 logging.basicConfig(filename=file,filemode='a', level=logging.INFO, format='%(levelname)s - %(message)s - %(asctime)s')
 
 len = int(input('Enter the length of pass>>'))
 if len<8:
     print('Password should be atleast 8 characters long!!')
-    logging.error('Less than 8')
+    logging.error('Less than 8') #log error in case of minimum length less than 8
 
 else:
     password = generate_pass(len)
